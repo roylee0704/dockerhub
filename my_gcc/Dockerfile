@@ -6,7 +6,7 @@ RUN apt-get install -y \
     gcc-4.7 \
     git \
     make
-RUN mkdir -p ~/dev/
+RUN mkdir -p /usr/local
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60
-ENV PATH ~/dev/:$PATH
-WORKDIR ~/dev/
+ENV PATH /usr/local:$PATH
+WORKDIR /usr/local
